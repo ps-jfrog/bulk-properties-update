@@ -1,0 +1,10 @@
+{
+    "files": [
+        {
+            "pattern": "krishnam-mvn-dev-local/com/example/todo-backend/",
+            "exclusions": [
+                "*.deb"
+            ]
+        }
+    ]
+}

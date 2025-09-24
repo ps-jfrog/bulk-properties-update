@@ -1,0 +1,39 @@
+{
+    "files": [
+        {
+            "aql": {
+                "items.find": {
+                    "type": "file",
+                    "size": {
+                        "$gt": "20000000"
+                    },
+                    "stat.downloads": {
+                        "$eq": null
+                    },
+                    "$or": [
+                        {
+                            "name": {
+                                "$match": "*.tar"
+                            }
+                        },
+                        {
+                            "name": {
+                                "$match": "*.zip"
+                            }
+                        },
+                        {
+                            "name": {
+                                "$match": "*.rpm"
+                            }
+                        },
+                        {
+                            "name": {
+                                "$match": "*.jar"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
